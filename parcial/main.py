@@ -1,34 +1,46 @@
-import criptomonedas
-import libroOrdenes
-import api
+import random
+import json
 import api
 from usuario import Usuario
-from libroOrdenes import LibroOrdenes
 from transacciones import Transaccion
-import random
+from libroOrdenes import LibroOrdenes
+from procesadorTx import ProcesadorTransacciones
 
-# Inicializar usuarios
-usuarios = {}
-for i in range(3):
-    u = Usuario(id=i, nombre=f"Usuario{i+1}", saldo_usd=1000, saldoCop=0)
-    usuarios[u.id] = u
-
-# Inicializar criptomonedas desde la API
-precios = {}
-simbolos = []
-for cripto in api.lista_Cryptos:
-    simbolos.append(cripto['symbol'])
-    precios[cripto['symbol']] = float(cripto['price_usd'])
-
-# Inicializar libro de órdenes
 libro = LibroOrdenes()
 
-# Simulación de 10 turnos
-for turno in range(10):
-    for cripto in criptos():
-        cripto.fluctuar()
 
 
+usuarios = {
+    1: Usuario(1,"juan",10000,1000+4000),
+    2: Usuario(2, "matias",5000,5000*4000)
+}
+
+
+for i in range (10):
+    crypto = random.choice(api.lista_Cryptos)
+    simbolo = crypto["symbol"]
+    precio = float(crypto["price_usd"])
+
+
+    Usuario_id = random.choice(list(usuarios.keys()))
+    tipo = random.choice(["compra","venta"])
+    cantidad = random.randint(1,10)
+
+    transaccion = Transaccion(Usuario_id, simbolo, cantidad, precio, tipo)
+    libro.encolar(transaccion)
+
+
+
+             
+
+
+
+procesador = ProcesadorTransacciones(usuarios,api.lista_Cryptos)
+procesador.procesar(libro)
+
+
+for z in usuarios.values():
+    print(z)
 
 
 

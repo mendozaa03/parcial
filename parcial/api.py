@@ -11,7 +11,6 @@ data = response.json()
 lista_Cryptos = data['data']
 colaPrecios = deque()
 listPrecios = data['data']
-print(lista_Cryptos)
 colaPrecios = deque()
 for precios in listPrecios:
     colaPrecios.append(precios['price_usd'])
