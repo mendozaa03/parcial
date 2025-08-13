@@ -1,10 +1,12 @@
+from stack import Stack
+
 class Usuario:
-    def __init__(self, id, nombre, saldo_usd,saldoCop):
+    def __init__(self, id, nombre, saldo_usd, saldoCop):
         self.id = id
         self.nombre = nombre
         self.saldo_usd = saldo_usd
-        self.portafolio = {} 
-        self.historial = []   # pila de transacciones
+        self.portafolio = {}  # {simbolo: cantidad}
+        self.historial = Stack()  # pila de transacciones
         self.saldoCop = saldoCop
 
     def agregar_activo(self, simbolo, cantidad):
@@ -16,5 +18,5 @@ class Usuario:
             if self.portafolio[simbolo] <= 0:
                 del self.portafolio[simbolo]
 
-    def agregar_historial(self, colaTransacciones):
-        self.historial.append(colaTransacciones)
+    def agregar_historial(self, transaccion):
+        self.historial.push(transaccion)

@@ -1,6 +1,4 @@
 import random
-from collections import dequeu
-colaPrecios = dequeu
 
 class Criptomoneda:
     
@@ -12,5 +10,5 @@ class Criptomoneda:
 
 
     def fluctuar(self):
-        cambio = random.uniform(-0.05, 0.05)  
-        self.precio_usd = (colaPrecios + cambio)
+        cambio = random.uniform(-0.05, 0.05)
+        self.precio_usd = round(self.precio_usd * (1 + cambio), 2)
