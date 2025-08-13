@@ -4,6 +4,7 @@ class ProcesadorTransacciones:
     def __init__(self,usuarios,criptos):
         self.usuarios = usuarios
         self.criptos = criptos
+        self.transaccionFallidas = []
 
     def procesar (self,libro):
         while libro.cola:
@@ -12,7 +13,8 @@ class ProcesadorTransacciones:
                 self.aplicar(transaccion)
                 self.usuarios[transaccion.usuario_id].agregar_historial(transaccion)
             else:
-                print("transaccion invalida")
+                print("transaccion invalida, el usuario no tiene suficientes monedas para vender o dinero para comprar")
+                self.transaccionFallidas.append(transaccion)
     def validar(self,transaccion):
         usuario = self.usuarios[transaccion.usuario_id]
         if transaccion.tipo == "compra":

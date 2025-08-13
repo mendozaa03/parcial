@@ -16,6 +16,12 @@ for precios in listPrecios:
     colaPrecios.append(precios['price_usd'])
 
 
+
+
+
+
+
+
 colaNombre = deque 
 
 

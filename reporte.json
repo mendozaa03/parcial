@@ -1,0 +1,35 @@
+{
+    "1": {
+        "saldo en dolares": 985011.44,
+        "saldo en peso colombiano": 3940045760.0,
+        "portafolio": {
+            "SPX": 2.0,
+            "CMETH": 3.0
+        },
+        "historial": [
+            {
+                "tipo": "venta",
+                "simbolo de compra": "SOON",
+                "cantidad comprada o vendida": 4.0,
+                "precio unitario": 0.417532,
+                "total dolares": 1.67
+            }
+        ]
+    },
+    "2": {
+        "saldo en dolares": 149999.27,
+        "saldo en peso colombiano": 599997080.0,
+        "portafolio": {
+            "DOGE": 3.0
+        },
+        "historial": [
+            {
+                "tipo": "venta",
+                "simbolo de compra": "SOON",
+                "cantidad comprada o vendida": 4.0,
+                "precio unitario": 0.417532,
+                "total dolares": 1.67
+            }
+        ]
+    }
+}

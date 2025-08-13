@@ -1,0 +1,72 @@
+[
+    {
+        "usuario_id": 1,
+        "tipo": "venta",
+        "simbolo": "ETC",
+        "cantidad": 7,
+        "precio_unitario": 24.17
+    },
+    {
+        "usuario_id": 1,
+        "tipo": "compra",
+        "simbolo": "SPX",
+        "cantidad": 2,
+        "precio_unitario": 1.78
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "venta",
+        "simbolo": "JASMY",
+        "cantidad": 8,
+        "precio_unitario": 0.018529
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "compra",
+        "simbolo": "DOGE",
+        "cantidad": 3,
+        "precio_unitario": 0.24341
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "venta",
+        "simbolo": "ETH",
+        "cantidad": 5,
+        "precio_unitario": 4720.51
+    },
+    {
+        "usuario_id": 1,
+        "tipo": "compra",
+        "simbolo": "CMETH",
+        "cantidad": 3,
+        "precio_unitario": 4995.0
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "venta",
+        "simbolo": "USDT",
+        "cantidad": 10,
+        "precio_unitario": 1.0
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "venta",
+        "simbolo": "XMR",
+        "cantidad": 1,
+        "precio_unitario": 256.03
+    },
+    {
+        "usuario_id": 2,
+        "tipo": "compra",
+        "simbolo": "WBTC",
+        "cantidad": 9,
+        "precio_unitario": 121524.69
+    },
+    {
+        "usuario_id": 1,
+        "tipo": "venta",
+        "simbolo": "SOON",
+        "cantidad": 4,
+        "precio_unitario": 0.417532
+    }
+]
